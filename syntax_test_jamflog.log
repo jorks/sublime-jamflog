@@ -1,0 +1,108 @@
+2020-12-09 23:46:59,153 [DEBUG] [duledPool-9] [ClusterThread            ] - CloudDistributionPointHelper is out of date. Refreshing...
+2021-03-22 04:38:26,696 [DEBUG] [duledPool-1] [VppLicenseMonitor        ] - Running VPPLicenseMonitor for com.jamfsoftware.vpp.VppAdminAccount@6665148a[id=1,name=AUS,email=,lastFullLicenseUpdateEpoch=1570690047212,clientContext={"guid":"ff4d6c2b-4a53-444a-a9c7-e925d76fabf0","hostname":"https://instance.jamfcloud.com"},localClientContext={"guid":"ff4d6c2b-4a53-444a-a9c7-e925s70fabf0","hostname":"https://instance.jamfcloud.com"},itunesStoreRegion=AU,purchasingInfo=com.jamfsoftware.vpp.VppAdminAccountPurchasing@2709seb7[id=1,adminAccountID=1,contact=John Admin,orgAppleID=],serviceTokenObject=com.jamfsoftware.vpp.VppServiceTokenObject@d68c9f9[expDate=2021-09-26T19:14:59-0700,orgName=APPLESEED INC],notifyDisassociation=true,tokenRevoked=false,populateCatalogFromVppContent=true,autoRegisterManagedUsersToVPP=false,location=com.jamfsoftware.vpp.comm.beans.Location@5c693ab7[locationId=2043400001601005,locationName=AppleSeed Head Office],defaultPlatform=enterprisestore]
+2020-12-09 23:48:25,106 [INFO ] [duledPool-9] [MetadataGenerator        ] - Generating metadata without encryption key, KeyStore doesn't contain any default private key, or the encryptionKey specified in ExtendedMetadata cannot be found
+2021-01-20 09:03:58,074 [INFO ] [startStop-1] [toryConfigurationDelegate] - Finished Spring Data repository scanning in 97ms. Found 5 JPA repository interfaces.
+2021-01-25 04:10:22,495 [WARN ] [duledPool-5] [nsPushNotificationUtility] - 55 invalid tokens were submitted to be pushed.
+2021-08-03 03:05:07,243 [WARN ] [lina-exec-8] [Credentials              ] - We don't want to return an X509 Cert from a PKCS12 data blob
+2021-08-03T03:06:03,010 [ERROR] [duledPool-1] [Http2ApnsService         ] - [apns] Sending push notification failed
+com.jamfsoftware.apns.exception.ApnsPushSentFailException: Push failed for the unmanaged device (management: 31aa4859-bba4-4561-bb86-855932da3eba) because the token is missing. Values for APN Token and Push Magic cannot be blank.
+    at com.jamfsoftware.apns.service.Http2ApnsService.checkApnsCapable(Http2ApnsService.java:198) ~[apns-impl-10.31.0-t1625750646.jar:?]
+    at com.jamfsoftware.apns.service.Http2ApnsService.send(Http2ApnsService.java:99) ~[apns-impl-10.31.0-t1625750646.jar:?]
+    at com.jamfsoftware.apns.service.Http2ApnsService.sendPushNotification(Http2ApnsService.java:75) ~[apns-impl-10.31.0-t1625750646.jar:?]
+    at com.jamfsoftware.apns.service.Http2ApnsService.sendPushNotifications(Http2ApnsService.java:113) [apns-impl-10.31.0-t1625750646.jar:?]
+    at com.jamfsoftware.apns.service.Http2ApnsService.sendPushNotificationsForManagementIds(Http2ApnsService.java:131) [apns-impl-10.31.0-t1625750646.jar:?]
+    at com.jamfsoftware.apns.service.KnobBasedApnsAdapter.sendPushNotificationsForManagementIds(KnobBasedApnsAdapter.java:69) [apns-impl-10.31.0-t1625750646.jar:?]
+    at com.jamfsoftware.apns.ApnsUtility.sendCheckInNotifications(ApnsUtility.java:94) [classes/:?]
+    at com.jamfsoftware.jss.objects.mobiledevicemanagement.UpdateMDMCommandQueue.updateQueue(UpdateMDMCommandQueue.java:285) [classes/:?]
+    at com.jamfsoftware.jss.objects.mobiledevicemanagement.MDMCommandQueueMonitor$MonitorRunnable.run(MDMCommandQueueMonitor.java:77) [classes/:?]
+    at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515) [?:?]
+    at java.util.concurrent.FutureTask.runAndReset(FutureTask.java:305) [?:?]
+    at com.jamfsoftware.jss.core.threading.JssFutureTask.run(JssFutureTask.java:41) [JSSCore-10.31.0-t1625750646.jar:?]
+    at org.springframework.security.concurrent.DelegatingSecurityContextRunnable.run(DelegatingSecurityContextRunnable.java:84) [spring-security-core-5.3.3.RELEASE.jar:5.3.3.RELEASE]
+    at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515) [?:?]
+    at java.util.concurrent.FutureTask.runAndReset(FutureTask.java:305) [?:?]
+    at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:305) [?:?]
+    at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128) [?:?]
+    at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628) [?:?]
+    at java.lang.Thread.run(Thread.java:834) [?:?]
+2021-08-03T03:11:03,009 [ERROR] [duledPool-3] [Http2ApnsService         ] - [apns] Sending push notification failed
+2021-01-25 04:09:17,630 [ERROR] [eralPool-15] [VppCommService           ] - Error managing licenses. ErrorNumber: 9600 , ErrorMessage:Either an associate or a disassociate array is required.
+2021-01-28 10:42:03,796 [ERROR] [duledPool-3] [ComputerGroupHelper      ] - java.sql.SQLException: (conn=730385) Lock wait timeout exceeded; try restarting transaction
+java.sql.SQLException: (conn=730385) Lock wait timeout exceeded; try restarting transaction
+    at org.mariadb.jdbc.internal.util.exceptions.ExceptionMapper.get(ExceptionMapper.java:261)
+    at org.mariadb.jdbc.internal.util.exceptions.ExceptionMapper.getException(ExceptionMapper.java:171)
+    at org.mariadb.jdbc.MariaDbStatement.executeExceptionEpilogue(MariaDbStatement.java:248)
+    at org.mariadb.jdbc.ClientSidePreparedStatement.executeInternal(ClientSidePreparedStatement.java:230)
+    at org.mariadb.jdbc.ClientSidePreparedStatement.execute(ClientSidePreparedStatement.java:157)
+    at org.mariadb.jdbc.ClientSidePreparedStatement.executeUpdate(ClientSidePreparedStatement.java:192)
+    at com.zaxxer.hikari.pool.ProxyPreparedStatement.executeUpdate(ProxyPreparedStatement.java:61)
+    at com.zaxxer.hikari.pool.HikariProxyPreparedStatement.executeUpdate(HikariProxyPreparedStatement.java)
+    at com.jamfsoftware.datasource.core.database.ThreeByteUtf8CompatiblePreparedStatement.executeUpdate(ThreeByteUtf8CompatiblePreparedStatement.java:61)
+    at com.jamfsoftware.datasource.util.database.DataSource.execute(DataSource.java:784)
+    at com.jamfsoftware.jss.objects.computergroup.ComputerGroupHelper.repairComputerGroupMemberships(ComputerGroupHelper.java:584)
+    at com.jamfsoftware.jss.objects.computergroup.ComputerGroupHelper.handleRepairComputerGroupMemberships(ComputerGroupHelper.java:380)
+    at com.jamfsoftware.jss.objects.computergroup.ComputerGroupHelper.refresh(ComputerGroupHelper.java:371)
+    at com.jamfsoftware.jss.objects.system.clustering.ClusterThread.digestUpdates(ClusterThread.java:104)
+    at com.jamfsoftware.jss.objects.system.clustering.ClusterThread.run(ClusterThread.java:50)
+    at org.springframework.security.concurrent.DelegatingSecurityContextRunnable.run(DelegatingSecurityContextRunnable.java:84)
+    at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515)
+    at java.base/java.util.concurrent.FutureTask.runAndReset(FutureTask.java:305)
+    at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:305)
+    at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+    at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+    at java.base/java.lang.Thread.run(Thread.java:834)
+Caused by: java.sql.SQLException: Lock wait timeout exceeded; try restarting transaction
+    at org.mariadb.jdbc.internal.protocol.AbstractQueryProtocol.readErrorPacket(AbstractQueryProtocol.java:1594)
+    at org.mariadb.jdbc.internal.protocol.AbstractQueryProtocol.readPacket(AbstractQueryProtocol.java:1453)
+    at org.mariadb.jdbc.internal.protocol.AbstractQueryProtocol.getResult(AbstractQueryProtocol.java:1415)
+    at org.mariadb.jdbc.internal.protocol.AbstractQueryProtocol.executeQuery(AbstractQueryProtocol.java:289)
+    at org.mariadb.jdbc.ClientSidePreparedStatement.executeInternal(ClientSidePreparedStatement.java:221)
+    ... 18 more
+2021-01-20 09:11:39,903 [FATAL] [erverThread] [StartupStatusStoreImpl   ] - Fatal error logged during server initialization: There was an error updating the database schema. Contact JAMF Software Support.
+2021-01-25 04:09:17,630 [ERROR] [eralPool-15] [VppCommService           ] - Error managing licenses. ErrorNumber: 9600 , ErrorMessage:Either an associate or a disassociate array is required.
+2021-01-20 09:03:58,074 [INFO ] [startStop-1] [toryConfigurationDelegate] - Finished Spring Data repository scanning in 97ms. Found 5 JPA repository interfaces.
+2020-12-09 23:46:59,153 [DEBUG] [duledPool-9] [ClusterThread            ] - CloudDistributionPointHelper is out of date. Refreshing...
+2021-01-20 09:11:25,849 [INFO ] [erverThread] [DataSource               ] - Creating database connection pool...
+2021-01-20 09:11:25,917 [INFO ] [erverThread] [InitializeServerThread   ] - Jamf Pro Version: 10.27.0-b.2.t1611068002
+2021-01-20 09:11:25,922 [INFO ] [startStop-1] [JssDispatcherServlet     ] - Initializing Servlet 'SpringDispatcher'
+2021-01-20 09:11:26,112 [INFO ] [erverThread] [ServerUtils              ] - Entering Debug Level 4
+2021-02-12 13:39:44,958 [INFO ] [Thread-50  ] [LoggingHelper            ] - Turning debug mode on.
+2021-02-12 13:22:07,141 [DEBUG] [Thread-50  ] [JssDispatcherServlet     ] - PUT "/custom/computer/mdm", parameters={}
+2021-02-12 13:22:07,145 [DEBUG] [Thread-50  ] [MDMController            ] - MDM message received : <?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <key>CommandUUID</key>
+    <string>4eaebe27-8ab1-40ea-a260-8a6466799ea9</string>
+    <key>NotOnConsole</key>
+    <false/>
+    <key>QueryResponses</key>
+    <dict>
+        <key>NotOnConsole</key>
+        <false/>
+        <key>UDID</key>
+        <string>55CEAN23-8F54-5C1B-9A45-9A594498CB64</string>
+        <key>UserID</key>
+        <string>AA5D18E9-A400-40AC-B5B7-513174CB0454</string>
+        <key>UserLongName</key>
+        <string>Bob Apple</string>
+        <key>UserShortName</key>
+        <string>bapple</string>
+        <key>iTunesStoreAccountIsActive</key>
+        <true/>
+    </dict>
+    <key>Status</key>
+    <string>Acknowledged</string>
+    <key>UDID</key>
+    <string>55CEAN23-8F54-5C1B-9A45-9A594498CB64</string>
+    <key>UserID</key>
+    <string>AA5D18E9-A400-40AC-B5B7-513174CB0454</string>
+    <key>UserLongName</key>
+    <string>Bob Apple</string>
+    <key>UserShortName</key>
+    <string>bapple</string>
+</dict>
+</plist>
+
+2021-02-12 13:22:07,167 [DEBUG] [Thread-50  ] [MDMActionFactory         ] - Looked up MDM capable device for managementId: aa15b3ba-b86b-4815-a1fe-8d0453306ee6 ComputerShell [ID=284, Name=Special￢ﾀﾙs MacBook Air]
+2021-02-12 13:22:07,167 [DEBUG] [Thread-50  ] [MDMActionFactory         ] - Looking up MDM capable user for device with user ID: AA5D18E9-A400-40AC-B5B7-813170CB0454

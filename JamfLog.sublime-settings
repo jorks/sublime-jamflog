@@ -1,0 +1,32 @@
+{
+
+	// ~ James Corcoran 2021 ~ https://jorks.net ~
+	//
+	//   ▄▄▄██▀▀▀▒█████   ██▀███   ██ ▄█▀  ██████
+	//     ▒██  ▒██▒  ██▒▓██ ▒ ██▒ ██▄█▒ ▒██    ▒
+	//     ░██  ▒██░  ██▒▓██ ░▄█ ▒▓███▄░ ░ ▓██▄
+	//  ▓██▄██▓ ▒██   ██░▒██▀▀█▄  ▓██ █▄   ▒   ██▒
+	//   ▓███▒  ░ ████▓▒░░██▓ ▒██▒▒██▒ █▄▒██████▒▒
+	//   ▒▓▒▒░  ░ ▒░▒░▒░ ░ ▒▓ ░▒▓░▒ ▒▒ ▓▒▒ ▒▓▒ ▒ ░
+	//   ▒ ░▒░    ░ ▒ ▒░   ░▒ ░ ▒░░ ░▒ ▒░░ ░▒  ░ ░
+	//   ░ ░ ░  ░ ░ ░ ▒    ░░   ░ ░ ░░ ░ ░  ░  ░
+	//   ░   ░      ░ ░     ░     ░  ░         ░
+
+
+	// Custom Colour Scheme for the JamfLog Syntax
+	// This syntax uses custom selectors and as such will not work with themes.
+	// If you wish to customise the colour scheme you can create a modified copy 
+	// of the JamfLog.sublime-color-scheme file and reference it below.
+	"color_scheme": "Packages/Jamflog/JamfLog.sublime-color-scheme",
+
+	// Set your preference for wrapping lines on file open and on setting syntax
+	// This setting can always be toggled using the command palette.
+	"word_wrap": false,
+
+	// This defines the file extensions to use this settings file with.
+	// If another software vendor uses the same timestamp format this may 
+	// incorrectly set the JamfLog syntax - sorry.
+	"extensions": [
+		"log"
+	]
+}

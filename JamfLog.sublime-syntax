@@ -1,0 +1,195 @@
+%YAML 1.2
+---
+# # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
+#
+# Copyright (c) 2021 Jamf.  All rights reserved.
+#
+#       Redistribution and use in source and binary forms, with or without
+#       modification, are permitted provided that the following conditions are met:
+#               * Redistributions of source code must retain the above copyright
+#                 notice, this list of conditions and the following disclaimer.
+#               * Redistributions in binary form must reproduce the above copyright
+#                 notice, this list of conditions and the following disclaimer in the
+#                 documentation and/or other materials provided with the distribution.
+#               * Neither the name of the Jamf nor the names of its contributors may be
+#                 used to endorse or promote products derived from this software without
+#                 specific prior written permission.
+#
+#       THIS SOFTWARE IS PROVIDED BY JAMF SOFTWARE, LLC "AS IS" AND ANY
+#       EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED
+#       WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE
+#       DISCLAIMED. IN NO EVENT SHALL JAMF SOFTWARE, LLC BE LIABLE FOR ANY
+#       DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES
+#       (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES;
+#       LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND
+#       ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
+#       (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS
+#       SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+#
+# # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
+                                                                                          #
+                                                                                          #
+# # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
+#
+#  ~ James Corcoran 2021 ~ https://jorks.net ~
+#
+#   ▄▄▄██▀▀▀▒█████   ██▀███   ██ ▄█▀  ██████
+#     ▒██  ▒██▒  ██▒▓██ ▒ ██▒ ██▄█▒ ▒██    ▒
+#     ░██  ▒██░  ██▒▓██ ░▄█ ▒▓███▄░ ░ ▓██▄
+#  ▓██▄██▓ ▒██   ██░▒██▀▀█▄  ▓██ █▄   ▒   ██▒
+#   ▓███▒  ░ ████▓▒░░██▓ ▒██▒▒██▒ █▄▒██████▒▒
+#   ▒▓▒▒░  ░ ▒░▒░▒░ ░ ▒▓ ░▒▓░▒ ▒▒ ▓▒▒ ▒▓▒ ▒ ░
+#   ▒ ░▒░    ░ ▒ ▒░   ░▒ ░ ▒░░ ░▒ ▒░░ ░▒  ░ ░
+#   ░ ░ ░  ░ ░ ░ ▒    ░░   ░ ░ ░░ ░ ░  ░  ░
+#   ░   ░      ░ ░     ░     ░  ░         ░
+#
+# # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
+                                                                                          #
+                                                                                          #
+# # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
+# Hot tips for navigating logs
+#
+#   Use the Command Palette Cmd + Shift + P
+#   Fold or Unfold All to hide all stack traces
+
+# Development Tips
+#
+#   See http://www.sublimetext.com/docs/3/syntax.html
+#   macOS Keyboard shortcut to show scope Ctl + Shift + P
+
+# Changelog
+#
+#   04/08/2021: Jamf Pro 10.31 introduced a new log format
+#    - Updated the timestamp regex (replaced known space with '.')
+#    - Updated the stack regex for new brackets while remaining backwards compatible
+#    - Fixed pushing XML to default package - yay!
+
+# To Do
+#
+#   Detect Jamf log files better, I think I can do this with first line logic
+#   Create some custom actions
+
+
+
+#### Syntax Definition ####
+
+# This can interfere with other log files - tough luck
+file_extensions:
+  - log
+
+first_line_match: '^\d{4}\-\d{2}\-\d{2}.\d{2}\:\d{2}\:\d{2}\,\d{3}\s\['
+
+# Default Scope
+scope: text.jamflog
+
+contexts:
+  # The main context is the initial starting point of our syntax
+  main:
+    # Include other contexts - the order is important
+    - include: timestamp
+    - include: helpfuls
+    - include: function
+    - include: thread
+    - include: severity
+    - include: exception
+    - include: stack
+    - include: inlinexml
+
+
+# New line starting with a timestamp
+  timestamp:
+    # Newline with date formatted based on digit counts
+    # 10.31 - added a . as some timestamps have a random T
+    - match: '^(\d{4}\-\d{2}\-\d{2}.\d{2}\:\d{2}\:\d{2}\,\d{3})'
+      scope: timestamp.jamflog
+
+
+# Helpfuls let me highlight message content
+  helpfuls:
+    # Messages in the log string that should be highlighted
+    - match: 'Jamf Pro Version:'
+      scope: startstop.thread.jamflog
+    - match: 'Turning debug mode on\.'
+      scope: startstop.thread.jamflog
+    - match: 'Turning debug mode off\.'
+      scope: startstop.thread.jamflog
+    - match: 'JAMF JSS DataSource Connection Pool'
+      scope: startstop.thread.jamflog
+
+
+# Function brackets
+  function:
+    # Matched but unused
+    - match: '\[.{25}\]'
+      scope: unused.function.jamflog
+
+
+# Thread brackets
+  thread:
+    # Match StartStops
+    - match: '(\[)(startStop\-\d)(\])'
+      captures:
+        1: peripheral.thread.jamflog
+        2: startstop.thread.jamflog
+        3: peripheral.thread.jamflog
+    - match: '\[.{11}\]'
+      scope: boaring.thread.jamflog
+
+
+# Log Message Severity
+  severity:
+    - match: '\['
+      scope: peripheral.jamflog
+    - match: 'DEBUG'
+      scope: debug.loglevel.jamflog
+    - match: 'INFO\s'
+      scope: info.loglevel.jamflog
+    - match: 'WARN\s'
+      scope: warn.loglevel.jamflog
+    - match: 'ERROR'
+      scope: error.loglevel.jamflog
+    - match: 'FATAL'
+      scope: fatal.loglevel.jamflog
+    - match: '\]'
+      scope: peripheral.jamflog
+
+
+# Java Exceptions
+  exception:
+    # This section could be improved
+    - match: '^([a-zA-Z\s]*)(.*Exception\:)(\s*.*)$'
+      captures:
+        1: control.jamflog
+        2: entity.exception.jamflog
+        3: entity.exception.message.jamflog
+
+
+# Stack Traces
+  stack:
+    # =< 10.30 it was '^(\s*)(at )(.*)(\(.*\))$'
+    # => 10.31 is is now: '^(\s*)(at )(.*)(\(.*\)).?.?+?(\[.*\])?$'
+    - match: '^(\s*)(at )(.*)(\(.*\)).?.?+?(\[.*\])?$'
+      captures:
+        1: control.jamflog
+        2: entity.warn.jamflog
+        3: entity.warn.message.jamflog
+        4: control.jamflog
+        5: library.jamflog
+    - match: '\.\.\.\s\d{2}\smore'
+      scope: control.jamflog
+
+
+# Push the builtin XML syntax
+  inlinexml:
+    - match: '(<\?xml)\s((.|\n)*)'
+      push: Packages/XML/XML.sublime-syntax
+      with_prototype:
+        # Pop with the typical end plist tag
+        - match: '(?<=</plist>)'
+          pop: true
+        # Pop at the next timestamped line if the XML is not closed correctly
+        - match: '^(\d{4}\-\d{2}\-\d{2}.\d{2}\:\d{2}\:\d{2}\,\d{3})'
+          scope: timestamp.jamflog
+          pop: true
+
+

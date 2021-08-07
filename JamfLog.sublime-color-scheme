@@ -1,0 +1,145 @@
+{
+    "name": "jamflog",
+    "globals":
+    {
+        "background": "#22282A",
+        "foreground": "#F1F2F3",
+        "caret": "#AEAFAD",
+        "invisibles": "#4B4E55",
+        "line_highlight": "#282A2E",
+        "selection": "#4F6164",
+    },
+    "rules":
+    [
+        {
+            // Use this scope when you want to see what you are matching.
+            "scope": "test.jamflog",
+            "foreground": "#FFFFFF",
+            "font_style": "",
+        },
+
+        // Timestamp
+        {
+            "scope": "timestamp.jamflog",
+            "foreground": "#9EB8D6",
+            "font_style": "",
+        },
+
+        // Helpfuls
+        {
+            "scope": "startstop.thread.jamflog",
+            "foreground": "#323333",
+            "background": "#49CEAB",
+            "font_style": "bold",
+        },
+
+        // Thread
+        {
+            "scope": "peripheral.thread.jamflog",
+            "foreground": "#929393",
+            "font_style": "",
+        },
+        {
+            "scope": "boaring.thread.jamflog",
+            "foreground": "#929393",
+            "font_style": "",
+        },
+
+
+        // Log Levels
+        {
+            "scope": "peripheral.jamflog",
+            "foreground": "#FFFFFF",
+            "font_style": "",
+        },
+        {
+            "scope": "debug.loglevel.jamflog",
+            "foreground": "#49CEAB",
+            "font_style":   "",
+        },
+        {
+            "scope": "info.loglevel.jamflog",
+            "foreground": "#A3D76D",
+            "font_style":   "",
+        },
+        {
+            "scope": "warn.loglevel.jamflog",
+            "foreground": "#DD6617",
+            "font_style":   "",
+        },
+        {
+            "scope": "error.loglevel.jamflog",
+            "foreground": "#E33D3D",
+            "font_style":   "",
+        },
+        {
+            "scope": "fatal.loglevel.jamflog",
+            "foreground": "#69689E",
+            "background": "#FFFFFF",
+            "font_style":   "bold",
+        },
+
+        //Java Exceptions
+        {
+            // Also used in stacks
+            "scope": "control.jamflog",
+            "foreground": "#C0C0C0",
+            "font_style": "",
+        },
+        {
+            "scope": "entity.exception.jamflog",
+            "foreground": "#E33D3D",
+            "font_style": "",
+        },
+        {
+            "scope": "entity.exception.message.jamflog",
+            "foreground": "#C0C0C0",
+            //"background": "#4F6164",
+            "font_style": "italic",
+        },
+
+        // Stack Traces
+        {
+            "scope": "library.jamflog",
+            "foreground": "#565961",
+            "font_style": "",
+        },
+        {
+            "scope": "entity.warn.jamflog",
+            "foreground": "#FFFF00",
+            "font_style": "",
+        },
+        {
+            "scope": "entity.warn.message.jamflog",
+            "foreground": "#FFCC00",
+            "font_style": "",
+        },
+        
+        
+        //This is the formatting for the built in XML syntax
+        {
+            // This is the XML punctuation
+            "scope": "punctuation.definition.tag.begin.xml, punctuation.definition.tag.end.xml, punctuation.definition.string.begin.xml, punctuation.definition.string.end.xml",
+            "foreground": "#60B4B4",
+            "font_style":   "",
+        },
+        {
+            // This is the XML tag content
+            "scope": "entity.name.tag.localname.xml",
+            "foreground": "#EB5F66",
+            "font_style": "",
+        },
+        {
+            // This is the doctype classes
+            "scope": "entity.other.attribute-name.localname.xml, keyword.declaration.doctype.xml, storage.type.external-content.xml",
+            "foreground": "#C694C6",
+            "font_style": "",
+        },
+        {
+            // This is the doctype classes quoted content
+            "scope": "string.quoted.double.xml",
+            "foreground": "#99C894",
+            "font_style": "",
+        },
+    ]
+}
