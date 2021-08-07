@@ -1,7 +1,7 @@
 JamfLog for Sublime Text
 ========================
 
-[![GitHub license](https://img.shields.io/github/license/jorks/sublime-jamflog.svg)](https://github.com/jorks/sublime-jamflog/blob/master/LICENCE.md) [![GitHub tag](https://img.shields.io/github/tag/jorks/sublime-jamflog.svg)](https://github.com/jorks/sublime-jamflog/tags) Coming soon [![Package Control](https://img.shields.io/packagecontrol/dt/JamfLog.svg)](https://packagecontrol.io/packages/JamfLog) 
+[![GitHub tag](https://img.shields.io/github/tag/jorks/sublime-jamflog.svg)](https://github.com/jorks/sublime-jamflog/tags) Coming soon:[![Package Control](https://img.shields.io/packagecontrol/dt/JamfLog.svg)](https://packagecontrol.io/packages/JamfLog) 
 
 [Jamf Log](http://github.com/jorks/sublime-jamflog) is a [Sublime Text](http://www.sublimetext.com/) syntax highlighter for [Jamf Pro](http://jamf.com) server logs.
 
