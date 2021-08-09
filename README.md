@@ -28,9 +28,9 @@ The recommended way to install and update this package is using [Package Control
 3. Open the command palette and search `Package Control: Install Package`
 4. Search for `JamfLog` and install the latest version. 
 
-#### Manually
 
-If you prefer to install this package manually, you can `git clone` this repo or extract the ZIP archive into your Sublime Text `Packages` folder.
+
+**Manual Install:** If you prefer to install this package manually, you can `git clone` this repo or extract the ZIP archive into your Sublime Text `Packages` folder. When the package is installed manually, you can override the settings and colour scheme.
 
 **Compatibility:** JamfLog works with Sublime Text 3 & 4 for macOS, Windows and Linux with 99% of testing performed on macOS.
 
