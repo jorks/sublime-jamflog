@@ -169,7 +169,7 @@ contexts:
         3: entity.warn.message.jamflog
         4: control.jamflog
         5: library.jamflog
-    - match: '\.\.\.\s\d{2}\smore'
+    - match: '\.\.\.\s[0-9]+\smore'
       scope: control.jamflog
 
 
