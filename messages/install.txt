@@ -1,0 +1,41 @@
+=======================================
+
+      __           ___  __            
+  __ / /__ ___ _  / _/ / /  ___  ___ _
+ / // / _ `/  ' \/ _/ / /__/ _ \/ _ `/
+ \___/\_,_/_/_/_/_/  /____/\___/\_, / 
+                               /___/  
+
+=======================================
+
+Hello there!
+
+Thank you for installing JamfLog, a highlighter that makes log files
+downloaded from a Jamf Pro server easier to read for humans.
+
+-------------------------------------------------------------------
+
+One time setup (for best experience):
+
+- With the JamfLog syntax set
+- Open Preferences ▶ Settings – Syntax Specific
+- Copy the following defaults into the file:
+
+      "color_scheme": "Packages/Jamflog/JamfLog.sublime-color-scheme",
+      "word_wrap": false
+
+-------------------------------------------------------------------
+
+Usage Tips:
+
+Open a Jamf Pro `.log` file and use the Command Palette to:
+
+- `Set Syntax: JamfLog`
+- `Word Wrap: Toggle`
+- `Code Folding: Fold/Unfold All` (hides all the stack traces)
+
+-------------------------------------------------------------------
+
+GitHub homepage: https://github.com/jorks/sublime-jamflog
+
+James Corcoran 2021 | https://jorks.net
