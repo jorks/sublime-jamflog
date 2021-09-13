@@ -4,7 +4,6 @@
 # James Corcoran 2021
 # https://github.com/jorks/sublime-jamflog
 
-
 # Development Tips
 #
 #   See http://www.sublimetext.com/docs/3/syntax.html
@@ -39,27 +38,27 @@ contexts:
     # Newline with date formatted based on digit counts
     # 10.31 - added a . as some timestamps have a random T
     - match: '^(\d{4}\-\d{2}\-\d{2}.\d{2}\:\d{2}\:\d{2}\,\d{3})'
-      scope: timestamp.jamflog
+      scope: constant.numeric.jamflog timestamp.jamflog
 
 
 # Helpfuls let me highlight message content
   helpfuls:
     # Messages in the log string that should be highlighted
     - match: 'Jamf Pro Version:'
-      scope: startstop.thread.jamflog
+      scope: invalid.deprecated.jamflog startstop.thread.jamflog
     - match: 'Turning debug mode on\.'
-      scope: startstop.thread.jamflog
+      scope: invalid.deprecated.jamflog startstop.thread.jamflog
     - match: 'Turning debug mode off\.'
-      scope: startstop.thread.jamflog
+      scope: invalid.deprecated.jamflog startstop.thread.jamflog
     - match: 'JAMF JSS DataSource Connection Pool'
-      scope: startstop.thread.jamflog
+      scope: invalid.deprecated.jamflog startstop.thread.jamflog
 
 
 # Function brackets
   function:
     # Matched but unused
     - match: '\[.{25}\]'
-      scope: unused.function.jamflog
+      scope: entity.name.label.jamflog unused.function.jamflog
 
 
 # Thread brackets
@@ -67,29 +66,32 @@ contexts:
     # Match StartStops
     - match: '(\[)(startStop\-\d)(\])'
       captures:
-        1: peripheral.thread.jamflog
-        2: startstop.thread.jamflog
-        3: peripheral.thread.jamflog
-    - match: '\[.{11}\]'
-      scope: boaring.thread.jamflog
+        1: punctuation.definition.tag.begin.jamflog peripheral.thread.jamflog
+        2: invalid.deprecated.jamflog startstop.thread.jamflog
+        3: punctuation.definition.tag.end.jamflog peripheral.thread.jamflog
+    - match: '(\[)(.{11})(\])'
+      captures:
+        1: punctuation.definition.tag.begin.jamflog boaring.thread.jamflog
+        2: boaring.thread.jamflog
+        3: punctuation.definition.tag.begin.jamflog boaring.thread.jamflog
 
 
 # Log Message Severity
   severity:
     - match: '\['
-      scope: peripheral.jamflog
+      scope: punctuation.definition.tag.begin.jamflog peripheral.jamflog
     - match: 'DEBUG'
-      scope: debug.loglevel.jamflog
+      scope: markup.inserted.jamflog markup.info.jamflog debug.loglevel.jamflog
     - match: 'INFO\s'
-      scope: info.loglevel.jamflog
+      scope: markup.inserted.jamflog markup.info.jamflog info.loglevel.jamflog
     - match: 'WARN\s'
-      scope: warn.loglevel.jamflog
+      scope: markup.changed.jamflog markup.warning.jamflog warn.loglevel.jamflog
     - match: 'ERROR'
-      scope: error.loglevel.jamflog
+      scope: markup.deleted.jamflog markup.error.jamflog error.loglevel.jamflog
     - match: 'FATAL'
-      scope: fatal.loglevel.jamflog
+      scope: invalid.illegal.jamflog fatal.loglevel.jamflog
     - match: '\]'
-      scope: peripheral.jamflog
+      scope: punctuation.definition.tag.end.jamflog peripheral.jamflog
 
 
 # Java Exceptions
@@ -97,8 +99,8 @@ contexts:
     # This section could be improved
     - match: '^([a-zA-Z\s]*)(.*Exception\:)(\s*.*)$'
       captures:
-        1: control.jamflog
-        2: entity.exception.jamflog
+        1: markup.deleted.jamflog markup.error.jamflog control.jamflog
+        2: markup.deleted.jamflog entity.exception.jamflog
         3: entity.exception.message.jamflog
 
 
@@ -108,11 +110,11 @@ contexts:
     # => 10.31 is is now: '^(\s*)(at )(.*)(\(.*\)).?.?+?(\[.*\])?$'
     - match: '^(\s*)(at )(.*)(\(.*\)).?.?+?(\[.*\])?$'
       captures:
-        1: control.jamflog
-        2: entity.warn.jamflog
-        3: entity.warn.message.jamflog
-        4: control.jamflog
-        5: library.jamflog
+        1: text.jamflog
+        2: keyword.control.import.jamflog entity.warn.jamflog
+        3: support.function.jamflog entity.warn.message.jamflog
+        4: string.quoted.single.jamflog control.jamflog
+        5: support.class.jamflog library.jamflog
     - match: '\.\.\.\s[0-9]+\smore'
       scope: control.jamflog
 
@@ -127,7 +129,7 @@ contexts:
           pop: true
         # Pop at the next timestamped line if the XML is not closed correctly
         - match: '^(\d{4}\-\d{2}\-\d{2}.\d{2}\:\d{2}\:\d{2}\,\d{3})'
-          scope: timestamp.jamflog
+          scope: constant.numeric.jamflog   timestamp.jamflog
           pop: true
 
 
