@@ -1,0 +1,9 @@
+[
+    {
+    "caption": "Preferences: JamfLog Settings",
+    "command": "edit_settings",
+    "args": {
+      "base_file": "${packages}/JamfLog/JamfLog.sublime-settings",
+      "default": "// JamfLog works best after activating the default settings\n//\n// !!! SAVE THIS FILE !!! to activate the default settings\n//\n{\n    // Enable the JamfLog Syntax Colour Scheme\n    \"color_scheme\": \"Packages/Jamflog/JamfLog.sublime-color-scheme\",\n\n    // Disabling word wrap makes the logs easier to read\n    \"word_wrap\": false\n}\n"}
+    },
+]

@@ -11,18 +11,14 @@
 Hello there!
 
 Thank you for installing JamfLog, a highlighter that makes log files
-downloaded from a Jamf Pro server easier to read for humans.
+downloaded from a Jamf Pro server easier for humans to read.
 
 -------------------------------------------------------------------
 
-One time setup (for best experience):
+ONE TIME SETUP REQUIRED
 
-- With the JamfLog syntax set
-- Open Preferences ▶ Settings – Syntax Specific
-- Copy the following defaults into the file:
-
-      "color_scheme": "Packages/Jamflog/JamfLog.sublime-color-scheme",
-      "word_wrap": false
+1. Open the Tools > Command Palette.. and search `Preferences: JamfLog Settings`
+2. The prefilled default settings file will open - SAVE THIS FILE - Done!
 
 -------------------------------------------------------------------
 

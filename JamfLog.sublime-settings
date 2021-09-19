@@ -1,0 +1,16 @@
+{}
+////////////////// RECOMMENDED DEFAULT SETTINGS//////////////////
+//
+// JamfLog works best after activating the default settings.
+//
+// The recommended default settings are:
+//
+/////////////////////////////////////////////////////////////////
+
+// {
+// 	// Enable the JamfLog Syntax Colour Scheme 
+// 	"color_scheme": "Packages/Jamflog/JamfLog.sublime-color-scheme",
+//
+// 	// Disabling word wrap makes the logs easier to read
+// 	"word_wrap": false
+// }

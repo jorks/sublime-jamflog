@@ -5,24 +5,23 @@ JamfLog for Sublime Text
 
 [Jamf Log](http://github.com/jorks/sublime-jamflog) is a [Sublime Text](http://www.sublimetext.com/) syntax highlighter for [Jamf Pro](http://jamf.com) server logs.
 
-The plugin makes log files downloaded from a Jamf Pro server easier to read for humans!
+The plugin makes log files downloaded from a Jamf Pro server easier for humans to read!
 
-Installation
+Installation Via Package Control
 ------------
 
-#### Via Package Control (Recommended)
-
-
 The recommended way to install and update this package is using [Package Control](https://packagecontrol.io/).
-**08/2021: Submission Pending.**
 
-0. Open the command palette and search `Install Package Control`
-1. Open the command palette and search `Package Control: Install Package`
+1. Open the Tools > Command Palette and search `Package Control: Install Package`
 2. Search for `JamfLog` and install the latest version. 
 
-**Manual Install:** If you prefer to install this package manually, you can `git clone` this repo or extract the ZIP archive into your Sublime Text `Packages` folder. When the package is installed manually, you can override the settings and colour scheme.
+#### ONE TIME SETUP REQUIRED
 
-**Compatibility:** JamfLog works with Sublime Text 3 & 4 for macOS, Windows and Linux with 99% of testing performed on macOS.
+1. Open the Tools > Command Palette.. and search `Preferences: JamfLog Settings`
+2. The prefilled default settings file will open - **SAVE THIS FILE** - Done!
+
+If you have never used package control, open the Tools > Command Palette and search `Install Package Control`
+
 
 Usage Tips
 ----------
@@ -48,3 +47,5 @@ Screenshot
 ----------
 
 ![screenshot](images/JamfLogExample.png)
+
+**Compatibility:** JamfLog works with Sublime Text 3 & 4 for macOS, Windows and Linux with 99% of testing performed on macOS.
