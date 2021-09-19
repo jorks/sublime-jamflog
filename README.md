@@ -15,7 +15,7 @@ The recommended way to install and update this package is using [Package Control
 1. Open the Tools > Command Palette and search `Package Control: Install Package`
 2. Search for `JamfLog` and install the latest version. 
 
-#### ONE TIME SETUP REQUIRED
+#### ⚠️ ONE TIME SETUP REQUIRED ⚠️
 
 1. Open the Tools > Command Palette.. and search `Preferences: JamfLog Settings`
 2. The prefilled default settings file will open - **SAVE THIS FILE** - Done!
