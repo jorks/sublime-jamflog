@@ -13,9 +13,11 @@ Hello there!
 Thank you for installing JamfLog, a highlighter that makes log files
 downloaded from a Jamf Pro server easier for humans to read.
 
+📺 YouTube How-to: https://www.youtube.com/watch?v=iqHyu3vG48w
+
 -------------------------------------------------------------------
 
-ONE TIME SETUP REQUIRED
+⚠️ ONE TIME SETUP REQUIRED ⚠️
 
 1. Open the Tools > Command Palette.. and search `Preferences: JamfLog Settings`
 2. The prefilled default settings file will open - SAVE THIS FILE - Done!

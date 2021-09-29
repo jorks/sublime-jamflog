@@ -22,6 +22,9 @@ The recommended way to install and update this package is using [Package Control
 
 If you have never used package control, open the Tools > Command Palette and search `Install Package Control`
 
+**📺 Watch JamfLog for Sublime Text - Install Instructions and Usage on YouTube 📺**
+
+[![Watch JamfLog for Sublime Text - Install Instructions and Usage](https://j.gifs.com/Y7523A.gif)](https://www.youtube.com/watch?v=iqHyu3vG48w "JamfLog for Sublime Text - Install Instructions and Usage")
 
 Usage Tips
 ----------
