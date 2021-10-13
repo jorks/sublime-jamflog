@@ -1,7 +1,10 @@
 JamfLog for Sublime Text
 ========================
 
-[![GitHub license](https://img.shields.io/github/license/jorks/sublime-jamflog.svg)](https://github.com/jorks/sublime-jamflog/blob/master/LICENSE) [![GitHub tag](https://img.shields.io/github/tag/jorks/sublime-jamflog.svg)](https://github.com/jorks/sublime-jamflog/tags)
+<img src="images/JamfLog_Logo.png" align="right" height="125" width="125" >
+
+[![GitHub license](https://img.shields.io/github/license/jorks/sublime-jamflog.svg)](https://github.com/jorks/sublime-jamflog/blob/master/LICENSE) [![GitHub tag](https://img.shields.io/github/tag/jorks/sublime-jamflog.svg)](https://github.com/jorks/sublime-jamflog/tags) [![Jamf Marketplace](https://img.shields.io/badge/Jamf%20Marketplace-Available%20-778eb1)](https://marketplace.jamf.com/details/jamflog-for-sublime-text/)
+
 
 [Jamf Log](http://github.com/jorks/sublime-jamflog) is a [Sublime Text](http://www.sublimetext.com/) syntax highlighter for [Jamf Pro](http://jamf.com) server logs.
 
@@ -24,7 +27,7 @@ If you have never used package control, open the Tools > Command Palette and sea
 
 **📺 Watch JamfLog for Sublime Text - Install Instructions and Usage on YouTube 📺**
 
-[![Watch JamfLog for Sublime Text - Install Instructions and Usage](https://j.gifs.com/Y7523A.gif)](https://www.youtube.com/watch?v=iqHyu3vG48w "JamfLog for Sublime Text - Install Instructions and Usage")
+<p align="center"><a href="https://www.youtube.com/watch?v=iqHyu3vG48w" alt="JamfLog for Sublime Text - Install Instructions and Usage"><img src="https://j.gifs.com/Y7523A.gif"></a></p>
 
 Usage Tips
 ----------
@@ -46,9 +49,14 @@ License
 sublime-jamflog (JamfLog) is licensed under the MIT license. [LICENSE](https://raw.githubusercontent.com/jorks/sublime-jamflog/master/LICENSE)
 
 
-Screenshot
-----------
+Screenshots
+-----------
 
-![screenshot](images/JamfLogExample.png)
+![How nice are colours](images/JamfLog.png)
+
+![Code Folding makes the important lines stand out](images/CodeFolding.gif)
+
+![Toggle Word Wrap to manage those extra long lines](images/ToggleWordWrap.gif)
+
 
 **Compatibility:** JamfLog works with Sublime Text 3 & 4 for macOS, Windows and Linux with 99% of testing performed on macOS.
